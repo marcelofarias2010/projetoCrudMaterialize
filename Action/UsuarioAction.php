@@ -17,7 +17,7 @@ if ($req == "1") {
     $usuario = $usuarioController->AutenticarUsuario($usu, $senha, $permissao);
     if (!empty($usuario)) {
         $_SESSION["id"] = $usuario->getId();
-        
+        $_SESSION['nome'] = $usuario->getNome();
         $ex = explode(" ", $usuario->getEmail());
         $_SESSION["email"] = $ex[0];
         echo "ok";

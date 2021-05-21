@@ -3,10 +3,28 @@
 
 class Usuario {
     private $id;
+    private $nome;
     private $email;
     private $password;
+    private $permicao;
     
-    function getId() {
+    function getNome() {
+        return $this->nome;
+    }
+
+    function setNome($nome) {
+        $this->nome = $nome;
+    }
+
+        function getPermicao() {
+        return $this->permicao;
+    }
+
+    function setPermicao($permicao) {
+        $this->permicao = $permicao;
+    }
+
+        function getId() {
         return $this->id;
     }
 

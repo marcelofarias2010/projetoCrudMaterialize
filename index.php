@@ -16,7 +16,8 @@ and open the template in the editor.
         <title>Tela Inicial</title>
     </head>
     <body>
-        <?php
+        
+        <?php        
         require __DIR__ . "/include/header.php";
         ?>
 
@@ -27,6 +28,7 @@ and open the template in the editor.
             <a class="carousel-item" href="#four!"><img src="imagens/psg4.jpg" width="250" height="250"></a>
             <a class="carousel-item" href="#five!"><img src="imagens/psg5.jpg" width="250" height="250"></a>
         </div>
+        <h1>Seja bem vindo: <?php echo $_SESSION['nome']; ?></h1>
         <?php
         require __DIR__ . "/include/footer.php";
         ?>
