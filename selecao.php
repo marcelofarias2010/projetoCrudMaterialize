@@ -10,6 +10,7 @@ include __DIR__ . './classes/ClassCrud.php';
             <th>Nome</th>
             <th>Sobrenome</th>
             <th>E-mail</th>
+            <th>Foto</th>
             <th>Ação</th>
         </tr>
     </thead>
@@ -25,6 +26,7 @@ include __DIR__ . './classes/ClassCrud.php';
                 <td><?php echo $Fetch['firstname']; ?></td>
                 <td><?php echo $Fetch['lastname']; ?></td>
                 <td><?php echo $Fetch['email']; ?></td>
+                <td><?php echo "<img src='Controllers/{$Fetch['imagem']}' width='50' heigth='50'>" ?></td>
                 <td>
                     <a href="<?php echo "visualizar.php?id={$Fetch['id']}"; ?>">
                         <i class="small material-icons">search</i>

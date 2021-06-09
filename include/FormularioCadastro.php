@@ -36,7 +36,7 @@ else {
 <div class="Resultado"></div>
 
 <div class="row">
-    <form id="FormCadastro" class="col s12" method="post" action="Controllers/ControllerCadastro.php">
+    <form method="post" action="Controllers/ControllerCadastro.php" enctype="multipart/form-data">
         <input type="hidden" id="Acao" name="Acao" value="<?php echo $Acao; ?>">
         <input type="hidden" id="Id" name="Id" value="<?php echo $Id; ?>">
         <div class="row">
@@ -56,10 +56,14 @@ else {
                 <input name="email" type="email" required value="<?php echo $Email ?>">
                 <label for="email">Email</label>
             </div>
-            <div class="col s6">
-                <input class="btn waves-effect waves-light" type="submit" name="action" value="<?php echo $Acao ?>">
-               
-            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">archive</i>
+                <input type="file" name="fileToUpload" required>                
+            </div>            
+        </div>
+        <div class="col s6">
+            <input class="btn waves-effect waves-light" type="submit" name="submit" value="<?php echo $Acao ?>">
+
         </div>
     </form>
 </div>
