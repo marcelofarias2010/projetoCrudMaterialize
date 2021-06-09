@@ -11,6 +11,7 @@ include './classes/ClassCrud.php';
     $Fetch = $BFetch->fetch(PDO::FETCH_ASSOC);
     ?>
     <h1>Dados do Usuário</h1>
+    <img src="Controllers/<?php echo $Fetch['imagem'] ?>" width="100" height="100" title="foto">
     <hr>
     <div class="flow-text">
         <strong>Nome:</strong> <?php echo $Fetch['firstname']; ?><br>
